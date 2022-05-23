@@ -1,0 +1,3 @@
+%{
+  "puppeteer_img": {:hex, :puppeteer_img, "0.1.3", "b1bc4dff947fc3fc9bb71dadd6a3fda48ed8ec8799385f91f26c75538154b53c", [:mix], [], "hexpm", "96bd0fd94655b0ea7f6b970e8c50e6238fd92a3f33dec592f9dda8fb8d8608c3"},
+}
