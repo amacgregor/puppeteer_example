@@ -1,18 +1,20 @@
 defmodule PuppeteerExample do
   @moduledoc """
-  Documentation for `PuppeteerExample`.
+  An example module for taking screenshots with Puppeteer-Img.
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> PuppeteerExample.hello()
-      :world
-
+  Takes a screenshot of the given url and saves it to the given filename.
   """
-  def hello do
-    :world
+  def take_screenshot(url, filename) do
+    options = [
+      type: "jpeg",
+      path: "./" <> filename
+    ]
+
+    case PuppeteerImg.generate_image(url, options) do
+      {:ok, path} -> IO.puts(path) # where "path" == final path where generated image is stored.
+      {:error, error} -> IO.puts(error) # where "error" == some error message.
+    end
   end
 end
